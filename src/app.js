@@ -38,12 +38,35 @@ function pick(n) {
     $('#source').href = db.champions[n][0].source;
     renderCards();
     history.replaceState(null, '', '#' + encodeURIComponent(n));
+    document.dispatchEvent(new CustomEvent("midlab:enemy", {detail:n}));
 }
 function renderCards() { let ps = [...db.champions[selected]].sort((a, b) => sort === 'gold' ? b.gold - a.gold : (b.wr ?? -1) - (a.wr ?? -1)); if ($('#poolFilter').checked)
-    ps = ps.filter(p => favorites.has(p.name)); $('#resultCount').textContent = String(ps.length).padStart(2, '0'); $('#sortGold').classList.toggle('active', sort === 'gold'); $('#sortWin').classList.toggle('active', sort === 'wr'); $('#sortDescription').textContent = sort === 'gold' ? 'Ordinati per oro medio di vantaggio al minuto 15.' : 'Win rate più alto tra i 5 matchup presenti nel dataset.'; const max = Math.max(...ps.map(p => Math.abs(p.gold)), 1); $('#cards').innerHTML = ps.length ? ps.map((p, i) => `<article class="card ${i === 0 ? 'first' : ''}"><div class="cardtop"><span class="rank">${String(i + 1).padStart(2, '0')} / ${sort === 'gold' ? 'LANE' : 'WIN RATE'}</span><button class="star ${favorites.has(p.name) ? 'on' : ''}" data-fav="${esc(p.name)}" aria-label="${favorites.has(p.name) ? 'Rimuovi' : 'Aggiungi'} ${esc(p.name)} ${favorites.has(p.name) ? 'dal' : 'al'} pool">${favorites.has(p.name) ? '★' : '☆'}</button></div>${picture(p.name, 'portrait')}<h3>${esc(p.name)}</h3><div class="hint">${p.gold > 0 ? 'Vantaggio in oro nella lane' : 'Matchup meno sfavorevole'}</div><div class="metric ${p.gold <= 0 ? 'negative' : ''}">${gold(p.gold)} <small>oro</small></div><div class="metriclabel">DIFFERENZA AL MINUTO 15</div><div class="meter"><i style="width:${Math.abs(p.gold) / max * 100}%;${p.gold <= 0 ? 'background:var(--gold)' : ''}"></i></div><div class="stat"><span>Win rate partita</span><strong>${pct(p.wr)}</strong></div><div class="stat"><span>Partite analizzate</span><strong>${fmt(p.games)}</strong></div><p class="warning">${p.games < 500 ? 'Campione ridotto: meno di 500 partite' : p.gold <= 0 ? 'Il pick resta sotto in oro.' : 'Almeno 500 partite nel matchup'}</p><label class="compare"><input type="checkbox" data-compare="${esc(p.name)}" ${comparison.has(p.name) ? 'checked' : ''}> Confronta</label></article>`).join('') : '<div class="empty">Nessuno dei 5 counter è nel tuo pool.<br><br>Disattiva il filtro o aggiungi un campione con la stella ☆.</div>'; }
+    ps = ps.filter(p => favorites.has(p.name)); $('#resultCount').textContent = String(ps.length).padStart(2, '0'); $('#sortGold').classList.toggle('active', sort === 'gold'); $('#sortWin').classList.toggle('active', sort === 'wr'); $('#sortDescription').textContent = sort === 'gold' ? 'Ordinati per oro medio di vantaggio al minuto 15.' : 'Win rate più alto tra i 5 matchup presenti nel dataset.'; const max = Math.max(...ps.map(p => Math.abs(p.gold)), 1); $('#cards').innerHTML = ps.length ? ps.map((p, i) => `<article class="card ${i === 0 ? 'first' : ''}"><div class="cardtop"><span class="rank">${String(i + 1).padStart(2, '0')} / ${sort === 'gold' ? 'LANE' : 'WIN RATE'}</span><button class="star ${favorites.has(p.name) ? 'on' : ''}" data-fav="${esc(p.name)}" aria-label="${favorites.has(p.name) ? 'Rimuovi' : 'Aggiungi'} ${esc(p.name)} ${favorites.has(p.name) ? 'dal' : 'al'} pool">${favorites.has(p.name) ? '★' : '☆'}</button></div>${picture(p.name, 'portrait')}<h3>${esc(p.name)}</h3><p class="champ-title">${esc(db.assets[p.name]?.title || "")}</p><div class="hint">${p.gold > 0 ? 'Vantaggio in oro nella lane' : 'Matchup meno sfavorevole'}</div><div class="metric ${p.gold <= 0 ? 'negative' : ''}">${gold(p.gold)} <small>oro</small></div><div class="metriclabel">DIFFERENZA AL MINUTO 15</div><div class="meter"><i style="width:${Math.abs(p.gold) / max * 100}%;${p.gold <= 0 ? 'background:var(--gold)' : ''}"></i></div><div class="stat"><span>Win rate partita</span><strong>${pct(p.wr)}</strong></div><div class="stat"><span>Partite analizzate</span><strong>${fmt(p.games)}</strong></div><p class="warning">${p.games < 500 ? 'Campione ridotto: meno di 500 partite' : p.gold <= 0 ? 'Il pick resta sotto in oro.' : 'Almeno 500 partite nel matchup'}</p><button class="pro-card-button" data-pro="${esc(p.name)}">Pro build →</button><label class="compare"><input type="checkbox" data-compare="${esc(p.name)}" ${comparison.has(p.name) ? 'checked' : ''}> Confronta</label></article>`).join('') : '<div class="empty">Nessuno dei 5 counter è nel tuo pool.<br><br>Disattiva il filtro o aggiungi un campione con la stella ☆.</div>'; }
 function updateBar() { $('#compareBar').hidden = comparison.size === 0; $('#compareCount').textContent = `${comparison.size}/3 pick selezionati`; }
 function open(content) { $('#dialogBody').innerHTML = content; $('#dialog').showModal(); }
 function pool() { open(`<div class="eyebrow">IL TUO POOL PERSONALE</div><h2>I campioni che vuoi giocare.</h2><p>Tocca un ritratto per aggiungerlo o rimuoverlo. Le stelle dorate indicano i preferiti; vengono salvati solo in questo browser.</p><div class="poolgrid">${Object.keys(db.champions).sort().map(n => `<button class="champ ${favorites.has(n) ? 'selected' : ''}" data-pool="${esc(n)}" aria-pressed="${favorites.has(n)}">${picture(n)}<span>${esc(n)} ${favorites.has(n) ? '★' : ''}</span></button>`).join('')}</div>`); }
+async function refreshItalianTitles() {
+    try {
+        const cdn = 'https://ddragon.leagueoflegends.com';
+        const versions = await fetch(cdn + '/api/versions.json').then(r => { if (!r.ok) throw Error(); return r.json(); });
+        const version = versions.find(v => v.startsWith('16.22.')) || versions[0];
+        if (!version) return;
+        const response = await fetch(`${cdn}/cdn/${version}/data/it_IT/champion.json`);
+        if (!response.ok) return;
+        const official = Object.values((await response.json()).data);
+        const byId = new Map(official.map(c => [c.id.toLowerCase(), c.title]));
+        for (const a of Object.values(db.assets)) {
+            const title = byId.get(a.id.toLowerCase());
+            if (title) a.title = title;
+        }
+        $('#enemyTitle').textContent = db.assets[selected].title;
+        document.querySelectorAll('#cards [data-pro]').forEach(button => {
+            const title = button.closest('.card')?.querySelector('.champ-title');
+            if (title) title.textContent = db.assets[button.dataset.pro]?.title || '';
+        });
+        document.dispatchEvent(new Event('midlab:titles'));
+    } catch { /* The bundled titles remain available offline. */ }
+}
 async function init() {
     try {
         const res = await fetch('data.json');
@@ -59,6 +82,7 @@ async function init() {
             selected = hash;
         persist();
         pick(selected);
+        refreshItalianTitles();
         $('#search').addEventListener('input', renderRoster);
         $('#roster').addEventListener('click', e => { const b = e.target.closest('[data-enemy]'); if (b)
             pick(b.dataset.enemy); });

@@ -13,6 +13,7 @@
             <a class="brand" href="./"><span class="brandmark">M</span>MID<span>LAB</span><small>COUNTERPICK COMPANION</small></a>
             <nav>
                 <button class="active" id="navMatch">Matchup</button>
+                <button id="navPro">Pro Matchups</button>
                 <button id="navPool">Il mio pool <span id="poolCount">0</span></button>
                 <button id="method">Come leggere i dati ↗</button>
             </nav>
@@ -65,6 +66,23 @@
                     </div>
                     <p class="caveat">I 5 matchup selezionati per GD15. Il win rate riguarda l’intera partita, non la vittoria della lane.</p>
                 </section>
+                <section id="proPanel" class="pro-panel">
+                    <div class="eyebrow">03 / PRO MATCHUPS</div>
+                    <h2>Preparati come un pro.</h2>
+                    <p class="pro-muted">Cerca qualunque coppia di campioni del roster. Partite reali, stesso avversario e stessa posizione. Solo LCK, LPL, LEC e LCS.</p>
+                    <div id="proDuel" class="pro-duel"></div>
+                    <div class="pro-filters">
+                        <label>Avversario mid<select id="proEnemy"></select></label>
+                        <label>Il tuo campione<select id="proPick"></select></label>
+                        <label>Campionato<select id="proLeague"><option value="all">Tutti e quattro</option><option>LCK</option><option>LPL</option><option>LEC</option><option>LCS</option></select></label>
+                        <label>Tipo di partita<select id="proType"><option value="all">Tutte</option><option value="competitive">Competitiva</option><option value="soloq">SoloQ pro</option></select></label>
+                        <label>Periodo<select id="proDays"><option value="30">Ultimi 30 giorni</option><option value="90" selected>Ultimi 90 giorni</option><option value="180">Ultimi 180 giorni</option><option value="365">Ultimo anno</option></select></label>
+                    </div>
+                    <div id="proSources" class="pro-sources"></div>
+                    <div id="proStatus" class="pro-muted" aria-live="polite"></div>
+                    <div id="proMatches" class="pro-matches"></div>
+                    <details class="pro-help"><summary>Come vengono raccolte le partite?</summary><p>La cache locale contiene esclusivamente record con un avversario mid identificato. I dati competitivi vengono da Leaguepedia; la SoloQ da account pro verificati e Riot Match-V5, quando configurato. I link esterni permettono di cercare altre partite, ma non costituiscono risultati importati. Le icone vengono da Data Dragon e le build non sono garanzie di vittoria.</p></details>
+                </section>
                 <section class="bottom">
                     <article class="notes">
                         <div class="eyebrow">IL TUO TACCUINO</div>
@@ -82,7 +100,7 @@
                         <button id="export">↓ Esporta questi matchup in CSV</button>
                     </article>
                 </section>
-                <footer>MIDLAB <span>Strumento personale per la midlane. Non affiliato a Riot Games.</span><span>Dati statici · Patch 26.22</span></footer>
+                <footer>MIDLAB <span>Strumento personale per la midlane. Non affiliato a Riot Games.</span><span>Dati statici · Patch 26.22</span></footer><p class="pro-muted">MIDLAB isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.</p>
             </main>
         </div>
         <div hidden="" id="compareBar"><span id="compareCount">0/3 pick selezionati</span><button id="compareOpen">Confronta i pick →</button><button aria-label="Svuota confronto" id="compareClear">✕</button></div>
@@ -91,6 +109,7 @@
             <div id="dialogBody"></div>
         </dialog>
         <div id="toast" role="status"></div>
-        <script defer="" src="src/app.js"></script>
+        <script defer src="src/app.js"></script>
+        <script defer src="src/pro.js"></script>
     </body>
 </html>
