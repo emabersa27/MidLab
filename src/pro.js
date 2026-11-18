@@ -12,7 +12,17 @@
   function championId(name) { return db?.assets?.[name]?.id || String(name??'').replace(/[^a-z0-9]/gi,''); }
   function portrait(name,m) { const known=Object.values(db.assets).find(a=>norm(a.id)===norm(name)); const id=known?.id||db.assets[name]?.id; const remote=m?.champions?.[norm(name)]?.id||championId(name); return `<img class="pro-portrait" src="${safe(id?'assets/'+id+'.png':m?`${CDN}/cdn/${m.v}/img/champion/${remote}.png`:'assets/'+remote+'.png')}" alt="${safe(name)}" loading="lazy">`; }
   function https(url) { try { const u = new URL(url); return u.protocol === 'https:' ? u.href : ''; } catch { return ''; } }
-  async function json(url) { const r = await fetch(url,{signal:AbortSignal.timeout(8000)}); if (!r.ok) throw Error(`HTTP ${r.status}`); return r.json(); }
+  async function json(url) {
+    const r = await fetch(url, {
+        cache: 'no-store'
+    });
+
+    if (!r.ok) {
+        throw new Error(`HTTP ${r.status}`);
+    }
+
+    return await r.json();
+}
   function assets(patch) {
     const tag = String(patch || '');
     if (!metadata.has(tag)) metadata.set(tag, (async () => {
@@ -93,7 +103,13 @@
     if(!results.length)return;const games=await Promise.all(results.slice(0,limit).map(async g=>build(g,await assets(g.patch))));if(token!==seq)return;
     el('proMatches').innerHTML=games.join('')+(results.length>limit?`<button class="pro-card-button" id="historyMore">Mostra altre partite (${Math.min(limit,results.length)}/${results.length})</button>`:'');if(el('historyMore'))el('historyMore').onclick=()=>{limit+=20;render(false);};
   }
-  async function start(){if(ready||typeof db==='undefined'||!db?.assets)return;ready=true;el('proEnemy').innerHTML=Object.keys(db.champions).sort((a,b)=>a.localeCompare(b,'it')).map(n=>`<option value="${safe(n)}">${safe(n)}</option>`).join('');el('proEnemy').addEventListener('change',()=>pick(el('proEnemy').value));populate(selected);for(const id of ['proPick','proDirection','proLeague','proType','proDays'])el(id).addEventListener('change',()=>render());el('navPro').onclick=()=>el('proPanel').scrollIntoView({behavior:'smooth'});try{cache=await json('pro-matches.json');if(!Array.isArray(cache.matches))throw Error('Cache non valida');}catch{cache={matches:[],updatedAt:null};}render();}
+  async function start(){if(ready||typeof db==='undefined'||!db?.assets)return;ready=true;el('proEnemy').innerHTML=Object.keys(db.champions).sort((a,b)=>a.localeCompare(b,'it')).map(n=>`<option value="${safe(n)}">${safe(n)}</option>`).join('');el('proEnemy').addEventListener('change',()=>pick(el('proEnemy').value));populate(selected);for(const id of ['proPick','proDirection','proLeague','proType','proDays'])el(id).addEventListener('change',()=>render());el('navPro').onclick=()=>el('proPanel').scrollIntoView({behavior:'smooth'});try{cache=await json('pro-matches.json');if(!Array.isArray(cache.matches))throw Error('Cache non valida');}catch(error) {
+    console.error("Errore database MidLab:", error);
+    el('proStatus').textContent = error.message;
+    el('proMatches').textContent =
+        "Errore caricamento database: " + error.message;
+    return;
+}render();}
   document.addEventListener('midlab:enemy',e=>{if(!ready){start();return;}populate(e.detail);});
   document.addEventListener('midlab:titles',()=>{if(ready)render();});
   el('cards').addEventListener('click',e=>{const b=e.target.closest('[data-pro]');if(b)setPick(b.dataset.pro,true);});
