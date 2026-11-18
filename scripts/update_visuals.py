@@ -105,23 +105,47 @@ def photos(matches):
     names = {photo_key(g['player']): g['player'] for g in matches if isinstance(g.get('player'), str) and g['player'].strip()}
     pending = sorted((name for key, name in names.items() if not players.get(key, {}).get('url')), key=str.casefold)
     print(f'Foto: {len(names)} giocatori, {len(pending)} da cercare.', flush=True)
-    for batch in chunks(pending, 35):
-        # Player and OverviewPage are the case-sensitive page identity, not
-        # necessarily the shorter IGN. Do not guess if an exact match fails.
+    for batch in chunks(pending, 12):
+        # Profile images are often managed in PlayerImages instead of Players.Image.
         names_sql = ','.join(json.dumps(x, ensure_ascii=False) for x in batch)
-        response = request_json(WIKI_API, dict(action='cargoquery', format='json', tables='Players',
-            fields='OverviewPage=player,Image=image', where=f'OverviewPage IN ({names_sql})', limit=100), wiki=True)
-        rows = response.get('cargoquery')
-        if not isinstance(rows, list):
-            raise RuntimeError('Leaguepedia: risposta Cargo inattesa')
+        wanted = {photo_key(n) for n in batch}
         files = {}
-        for row in rows:
-            obj = row.get('title', {})
-            name, image = obj.get('player'), obj.get('image')
-            if name and photo_key(name) in names and image:
-                image = str(image).strip()
-                if image and '|' not in image:
-                    files[photo_key(name)] = (name, image if image.startswith('File:') else 'File:' + image)
+        # First try the dedicated image metadata table. Choose the profile image
+        # first, then the latest dated portrait, only for an exact player link.
+        try:
+            response = request_json(WIKI_API, dict(action='cargoquery', format='json',
+                tables='PlayerImages', fields='Link=player,FileName=image',
+                where=f'Link IN ({names_sql})',
+                order_by='IsProfileImage DESC,SortDate DESC', limit=500), wiki=True)
+            rows = response.get('cargoquery')
+            if not isinstance(rows, list):
+                raise RuntimeError('Leaguepedia: risposta Cargo inattesa')
+            print(f'PlayerImages: {len(rows)} righe ricevute.', flush=True)
+            for row in rows:
+                obj = row.get('title', {})
+                name, image = obj.get('player'), obj.get('image')
+                if name and photo_key(name) in wanted and image:
+                    image = str(image).strip()
+                    if image and '|' not in image:
+                        files.setdefault(photo_key(name), (name, image if image.startswith('File:') else 'File:' + image))
+        except (RuntimeError, URLError, ValueError, KeyError) as err:
+            print(f'PlayerImages: {err}; provo Players.Image.', flush=True)
+        remaining = [n for n in batch if photo_key(n) not in files]
+        if remaining:
+            names_sql = ','.join(json.dumps(x, ensure_ascii=False) for x in remaining)
+            response = request_json(WIKI_API, dict(action='cargoquery', format='json', tables='Players',
+                fields='Player=player,Image=image', where=f'Player IN ({names_sql})', limit=100), wiki=True)
+            rows = response.get('cargoquery')
+            if not isinstance(rows, list):
+                raise RuntimeError('Leaguepedia: risposta Cargo inattesa')
+            print(f'Players: {len(rows)} righe ricevute.', flush=True)
+            for row in rows:
+                obj = row.get('title', {})
+                name, image = obj.get('player'), obj.get('image')
+                if name and photo_key(name) in wanted and image:
+                    image = str(image).strip()
+                    if image and '|' not in image:
+                        files.setdefault(photo_key(name), (name, image if image.startswith('File:') else 'File:' + image))
         if not files:
             print('Nessuna foto associata a questo gruppo; mantengo le iniziali.', flush=True)
             continue
@@ -150,6 +174,19 @@ def photos(matches):
     print(f'Foto disponibili: {sum(k in players for k in names)}/{len(names)}.', flush=True)
 
 
+def normalize_items(values):
+    result = []
+    i = 0
+    while i < len(values):
+        if i + 1 < len(values) and norm(values[i]) == 'jaksho' and norm(values[i+1]) == 'theprotean':
+            result.append("Jak'Sho, The Protean")
+            i += 2
+        else:
+            result.append(values[i])
+            i += 1
+    return result
+
+
 def icons(matches):
     path = ROOT / 'pro-icons.json'
     saved = read_json(path, {'icons': {}})['icons']
@@ -163,7 +200,7 @@ def icons(matches):
                 required[kind][norm(v)] = str(v)
 
     for g in matches:
-        need('items', (g.get('items') or []) + [g.get('trinket')])
+        need('items', normalize_items(g.get('items') or []) + [g.get('trinket')])
         need('spells', g.get('spells') or [])
         r = g.get('runes') or {}
         need('runes', (r.get('primary') or []) + (r.get('secondary') or []))

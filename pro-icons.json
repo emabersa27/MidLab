@@ -1,0 +1,841 @@
+{
+  "updatedAt": "2026-11-18T18:30:41.833238+00:00",
+  "icons": {
+    "items": {
+      "giantsbelt": {
+        "name": "Giant's Belt",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1011.png",
+        "version": "16.23.1"
+      },
+      "cloakofagility": {
+        "name": "Cloak of Agility",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1018.png",
+        "version": "16.23.1"
+      },
+      "blastingwand": {
+        "name": "Blasting Wand",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1026.png",
+        "version": "16.23.1"
+      },
+      "sapphirecrystal": {
+        "name": "Sapphire Crystal",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1027.png",
+        "version": "16.23.1"
+      },
+      "rubycrystal": {
+        "name": "Ruby Crystal",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1028.png",
+        "version": "16.23.1"
+      },
+      "clotharmor": {
+        "name": "Cloth Armor",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1029.png",
+        "version": "16.23.1"
+      },
+      "nullmagicmantle": {
+        "name": "Null-Magic Mantle",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1033.png",
+        "version": "16.23.1"
+      },
+      "longsword": {
+        "name": "Long Sword",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1036.png",
+        "version": "16.23.1"
+      },
+      "pickaxe": {
+        "name": "Pickaxe",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1037.png",
+        "version": "16.23.1"
+      },
+      "bfsword": {
+        "name": "B. F. Sword",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1038.png",
+        "version": "16.23.1"
+      },
+      "amplifyingtome": {
+        "name": "Amplifying Tome",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1052.png",
+        "version": "16.23.1"
+      },
+      "doransshield": {
+        "name": "Doran's Shield",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1054.png",
+        "version": "16.23.1"
+      },
+      "doransblade": {
+        "name": "Doran's Blade",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1055.png",
+        "version": "16.23.1"
+      },
+      "doransring": {
+        "name": "Doran's Ring",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1056.png",
+        "version": "16.23.1"
+      },
+      "negatroncloak": {
+        "name": "Negatron Cloak",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1057.png",
+        "version": "16.23.1"
+      },
+      "needlesslylargerod": {
+        "name": "Needlessly Large Rod",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1058.png",
+        "version": "16.23.1"
+      },
+      "darkseal": {
+        "name": "Dark Seal",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1082.png",
+        "version": "16.23.1"
+      },
+      "doransbow": {
+        "name": "Doran's Bow",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/1086.png",
+        "version": "16.23.1"
+      },
+      "steelsigil": {
+        "name": "Steel Sigil",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/2019.png",
+        "version": "16.23.1"
+      },
+      "glowingmote": {
+        "name": "Glowing Mote",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/2022.png",
+        "version": "16.23.1"
+      },
+      "refillablepotion": {
+        "name": "Refillable Potion",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/2031.png",
+        "version": "16.23.1"
+      },
+      "controlward": {
+        "name": "Control Ward",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/2055.png",
+        "version": "16.23.1"
+      },
+      "elixirofsorcery": {
+        "name": "Elixir of Sorcery",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/2139.png",
+        "version": "16.23.1"
+      },
+      "seekersarmguard": {
+        "name": "Seeker's Armguard",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/2420.png",
+        "version": "16.23.1"
+      },
+      "shatteredarmguard": {
+        "name": "Shattered Armguard",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/2421.png",
+        "version": "16.23.1"
+      },
+      "blackfiretorch": {
+        "name": "Blackfire Torch",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/2503.png",
+        "version": "16.23.1"
+      },
+      "kaenicrookern": {
+        "name": "Kaenic Rookern",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/2504.png",
+        "version": "16.23.1"
+      },
+      "fatedashes": {
+        "name": "Fated Ashes",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/2508.png",
+        "version": "16.23.1"
+      },
+      "duskanddawn": {
+        "name": "Dusk and Dawn",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/2510.png",
+        "version": "16.23.1"
+      },
+      "actualizer": {
+        "name": "Actualizer",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/2522.png",
+        "version": "16.23.1"
+      },
+      "hexopticsc44": {
+        "name": "Hexoptics C44",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/2523.png",
+        "version": "16.23.1"
+      },
+      "guardianangel": {
+        "name": "Guardian Angel",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3026.png",
+        "version": "16.23.1"
+      },
+      "infinityedge": {
+        "name": "Infinity Edge",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3031.png",
+        "version": "16.23.1"
+      },
+      "mortalreminder": {
+        "name": "Mortal Reminder",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3033.png",
+        "version": "16.23.1"
+      },
+      "lorddominiksregards": {
+        "name": "Lord Dominik's Regards",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3036.png",
+        "version": "16.23.1"
+      },
+      "seraphsembrace": {
+        "name": "Seraph's Embrace",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3040.png",
+        "version": "16.23.1"
+      },
+      "mejaissoulstealer": {
+        "name": "Mejai's Soulstealer",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3041.png",
+        "version": "16.23.1"
+      },
+      "muramana": {
+        "name": "Muramana",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3042.png",
+        "version": "16.23.1"
+      },
+      "sheen": {
+        "name": "Sheen",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3057.png",
+        "version": "16.23.1"
+      },
+      "kindlegem": {
+        "name": "Kindlegem",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3067.png",
+        "version": "16.23.1"
+      },
+      "sunfireaegis": {
+        "name": "Sunfire Aegis",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3068.png",
+        "version": "16.23.1"
+      },
+      "tearofthegoddess": {
+        "name": "Tear of the Goddess",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3070.png",
+        "version": "16.23.1"
+      },
+      "bramblevest": {
+        "name": "Bramble Vest",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3076.png",
+        "version": "16.23.1"
+      },
+      "zeal": {
+        "name": "Zeal",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3086.png",
+        "version": "16.23.1"
+      },
+      "rabadonsdeathcap": {
+        "name": "Rabadon's Deathcap",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3089.png",
+        "version": "16.23.1"
+      },
+      "witsend": {
+        "name": "Wit's End",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3091.png",
+        "version": "16.23.1"
+      },
+      "rapidfirecannon": {
+        "name": "Rapid Firecannon",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3094.png",
+        "version": "16.23.1"
+      },
+      "lichbane": {
+        "name": "Lich Bane",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3100.png",
+        "version": "16.23.1"
+      },
+      "bansheesveil": {
+        "name": "Banshee's Veil",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3102.png",
+        "version": "16.23.1"
+      },
+      "fiendishcodex": {
+        "name": "Fiendish Codex",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3108.png",
+        "version": "16.23.1"
+      },
+      "frozenheart": {
+        "name": "Frozen Heart",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3110.png",
+        "version": "16.23.1"
+      },
+      "aetherwisp": {
+        "name": "Aether Wisp",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3113.png",
+        "version": "16.23.1"
+      },
+      "nashorstooth": {
+        "name": "Nashor's Tooth",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3115.png",
+        "version": "16.23.1"
+      },
+      "rylaiscrystalscepter": {
+        "name": "Rylai's Crystal Scepter",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3116.png",
+        "version": "16.23.1"
+      },
+      "malignance": {
+        "name": "Malignance",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3118.png",
+        "version": "16.23.1"
+      },
+      "voidstaff": {
+        "name": "Void Staff",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3135.png",
+        "version": "16.23.1"
+      },
+      "cryptbloom": {
+        "name": "Cryptbloom",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3137.png",
+        "version": "16.23.1"
+      },
+      "mercurialscimitar": {
+        "name": "Mercurial Scimitar",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3139.png",
+        "version": "16.23.1"
+      },
+      "quicksilversash": {
+        "name": "Quicksilver Sash",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3140.png",
+        "version": "16.23.1"
+      },
+      "youmuusghostblade": {
+        "name": "Youmuu's Ghostblade",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3142.png",
+        "version": "16.23.1"
+      },
+      "scoutsslingshot": {
+        "name": "Scout's Slingshot",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3144.png",
+        "version": "16.23.1"
+      },
+      "hextechalternator": {
+        "name": "Hextech Alternator",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3145.png",
+        "version": "16.23.1"
+      },
+      "hextechgunblade": {
+        "name": "Hextech Gunblade",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3146.png",
+        "version": "16.23.1"
+      },
+      "hauntingguise": {
+        "name": "Haunting Guise",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3147.png",
+        "version": "16.23.1"
+      },
+      "hextechrocketbelt": {
+        "name": "Hextech Rocketbelt",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3152.png",
+        "version": "16.23.1"
+      },
+      "bladeoftheruinedking": {
+        "name": "Blade of The Ruined King",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3153.png",
+        "version": "16.23.1"
+      },
+      "mawofmalmortius": {
+        "name": "Maw of Malmortius",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3156.png",
+        "version": "16.23.1"
+      },
+      "zhonyashourglass": {
+        "name": "Zhonya's Hourglass",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3157.png",
+        "version": "16.23.1"
+      },
+      "spearofshojin": {
+        "name": "Spear of Shojin",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3161.png",
+        "version": "16.23.1"
+      },
+      "morellonomicon": {
+        "name": "Morellonomicon",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3165.png",
+        "version": "16.23.1"
+      },
+      "immortalpath": {
+        "name": "Immortal Path",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3168.png",
+        "version": "16.23.1"
+      },
+      "swiftmarch": {
+        "name": "Swiftmarch",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3170.png",
+        "version": "16.23.1"
+      },
+      "crimsonlucidity": {
+        "name": "Crimson Lucidity",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3171.png",
+        "version": "16.23.1"
+      },
+      "gunmetalgreaves": {
+        "name": "Gunmetal Greaves",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3172.png",
+        "version": "16.23.1"
+      },
+      "chainlacedcrushers": {
+        "name": "Chainlaced Crushers",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3173.png",
+        "version": "16.23.1"
+      },
+      "armoredadvance": {
+        "name": "Armored Advance",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3174.png",
+        "version": "16.23.1"
+      },
+      "spellslingersshoes": {
+        "name": "Spellslinger's Shoes",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3175.png",
+        "version": "16.23.1"
+      },
+      "imperialmandate": {
+        "name": "Imperial Mandate",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/324005.png",
+        "version": "16.23.1"
+      },
+      "rodofages": {
+        "name": "Rod of Ages",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/326657.png",
+        "version": "16.23.1"
+      },
+      "abyssalmask": {
+        "name": "Abyssal Mask",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/328020.png",
+        "version": "16.23.1"
+      },
+      "stealthward": {
+        "name": "Stealth Ward",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3340.png",
+        "version": "16.23.1"
+      },
+      "farsightalteration": {
+        "name": "Farsight Alteration",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3363.png",
+        "version": "16.23.1"
+      },
+      "oraclelens": {
+        "name": "Oracle Lens",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3364.png",
+        "version": "16.23.1"
+      },
+      "essencereaver": {
+        "name": "Essence Reaver",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3508.png",
+        "version": "16.23.1"
+      },
+      "lostchapter": {
+        "name": "Lost Chapter",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3802.png",
+        "version": "16.23.1"
+      },
+      "edgeofnight": {
+        "name": "Edge of Night",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3814.png",
+        "version": "16.23.1"
+      },
+      "oblivionorb": {
+        "name": "Oblivion Orb",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/3916.png",
+        "version": "16.23.1"
+      },
+      "horizonfocus": {
+        "name": "Horizon Focus",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/4628.png",
+        "version": "16.23.1"
+      },
+      "cosmicdrive": {
+        "name": "Cosmic Drive",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/4629.png",
+        "version": "16.23.1"
+      },
+      "blightingjewel": {
+        "name": "Blighting Jewel",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/4630.png",
+        "version": "16.23.1"
+      },
+      "verdantbarrier": {
+        "name": "Verdant Barrier",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/4632.png",
+        "version": "16.23.1"
+      },
+      "riftmaker": {
+        "name": "Riftmaker",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/4633.png",
+        "version": "16.23.1"
+      },
+      "shadowflame": {
+        "name": "Shadowflame",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/4645.png",
+        "version": "16.23.1"
+      },
+      "stormsurge": {
+        "name": "Stormsurge",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/4646.png",
+        "version": "16.23.1"
+      },
+      "deathsdance": {
+        "name": "Death's Dance",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/6333.png",
+        "version": "16.23.1"
+      },
+      "stridebreaker": {
+        "name": "Stridebreaker",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/6631.png",
+        "version": "16.23.1"
+      },
+      "liandrystorment": {
+        "name": "Liandry's Torment",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/6653.png",
+        "version": "16.23.1"
+      },
+      "ludensecho": {
+        "name": "Luden's Echo",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/6655.png",
+        "version": "16.23.1"
+      },
+      "hollowradiance": {
+        "name": "Hollow Radiance",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/6664.png",
+        "version": "16.23.1"
+      },
+      "noonquiver": {
+        "name": "Noonquiver",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/6670.png",
+        "version": "16.23.1"
+      },
+      "krakenslayer": {
+        "name": "Kraken Slayer",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/6672.png",
+        "version": "16.23.1"
+      },
+      "immortalshieldbow": {
+        "name": "Immortal Shieldbow",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/6673.png",
+        "version": "16.23.1"
+      },
+      "navoriflickerblade": {
+        "name": "Navori Flickerblade",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/6675.png",
+        "version": "16.23.1"
+      },
+      "seryldasgrudge": {
+        "name": "Serylda's Grudge",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/6694.png",
+        "version": "16.23.1"
+      },
+      "serpentsfang": {
+        "name": "Serpent's Fang",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/6695.png",
+        "version": "16.23.1"
+      },
+      "voltaiccyclosword": {
+        "name": "Voltaic Cyclosword",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/6699.png",
+        "version": "16.23.1"
+      },
+      "opportunity": {
+        "name": "Opportunity",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/6701.png",
+        "version": "16.23.1"
+      },
+      "bloodletterscurse": {
+        "name": "Bloodletter's Curse",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/8010.png",
+        "version": "16.23.1"
+      },
+      "jakshotheprotean": {
+        "name": "Jak'Sho, The Protean",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/item/6665.png",
+        "version": "16.23.1"
+      }
+    },
+    "runes": {
+      "electrocute": {
+        "name": "Electrocute",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/Electrocute/Electrocute.png",
+        "version": "16.23.1"
+      },
+      "hailofblades": {
+        "name": "Hail of Blades",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/HailOfBlades/HailOfBlades.png",
+        "version": "16.23.1"
+      },
+      "tasteofblood": {
+        "name": "Taste of Blood",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/TasteOfBlood/GreenTerror_TasteOfBlood.png",
+        "version": "16.23.1"
+      },
+      "suddenimpact": {
+        "name": "Sudden Impact",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/SuddenImpact/SuddenImpact.png",
+        "version": "16.23.1"
+      },
+      "sixthsense": {
+        "name": "Sixth Sense",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/SixthSense/SixthSense.png",
+        "version": "16.23.1"
+      },
+      "grislymementos": {
+        "name": "Grisly Mementos",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/GrislyMementos/GrislyMementos.png",
+        "version": "16.23.1"
+      },
+      "deepward": {
+        "name": "Deep Ward",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/DeepWard/DeepWard.png",
+        "version": "16.23.1"
+      },
+      "treasurehunter": {
+        "name": "Treasure Hunter",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/TreasureHunter/TreasureHunter.png",
+        "version": "16.23.1"
+      },
+      "relentlesshunter": {
+        "name": "Relentless Hunter",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/RelentlessHunter/RelentlessHunter.png",
+        "version": "16.23.1"
+      },
+      "ultimatehunter": {
+        "name": "Ultimate Hunter",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Domination/UltimateHunter/UltimateHunter.png",
+        "version": "16.23.1"
+      },
+      "unsealedspellbook": {
+        "name": "Unsealed Spellbook",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/UnsealedSpellbook/UnsealedSpellbook.png",
+        "version": "16.23.1"
+      },
+      "firststrike": {
+        "name": "First Strike",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/FirstStrike/FirstStrike.png",
+        "version": "16.23.1"
+      },
+      "magicalfootwear": {
+        "name": "Magical Footwear",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/MagicalFootwear/MagicalFootwear.png",
+        "version": "16.23.1"
+      },
+      "cashback": {
+        "name": "Cash Back",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/CashBack/CashBack2.png",
+        "version": "16.23.1"
+      },
+      "tripletonic": {
+        "name": "Triple Tonic",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/PerfectTiming/AlchemistCabinet.png",
+        "version": "16.23.1"
+      },
+      "biscuitdelivery": {
+        "name": "Biscuit Delivery",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/BiscuitDelivery/BiscuitDelivery.png",
+        "version": "16.23.1"
+      },
+      "cosmicinsight": {
+        "name": "Cosmic Insight",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/CosmicInsight/CosmicInsight.png",
+        "version": "16.23.1"
+      },
+      "approachvelocity": {
+        "name": "Approach Velocity",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/ApproachVelocity/ApproachVelocity.png",
+        "version": "16.23.1"
+      },
+      "jackofalltrades": {
+        "name": "Jack Of All Trades",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Inspiration/JackOfAllTrades/JackofAllTrades2.png",
+        "version": "16.23.1"
+      },
+      "lethaltempo": {
+        "name": "Lethal Tempo",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LethalTempo/LethalTempoTemp.png",
+        "version": "16.23.1"
+      },
+      "fleetfootwork": {
+        "name": "Fleet Footwork",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/FleetFootwork/FleetFootwork.png",
+        "version": "16.23.1"
+      },
+      "conqueror": {
+        "name": "Conqueror",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/Conqueror/Conqueror.png",
+        "version": "16.23.1"
+      },
+      "absorblife": {
+        "name": "Absorb Life",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/AbsorbLife/AbsorbLife.png",
+        "version": "16.23.1"
+      },
+      "triumph": {
+        "name": "Triumph",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/Triumph.png",
+        "version": "16.23.1"
+      },
+      "presenceofmind": {
+        "name": "Presence of Mind",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/PresenceOfMind/PresenceOfMind.png",
+        "version": "16.23.1"
+      },
+      "legendalacrity": {
+        "name": "Legend: Alacrity",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendAlacrity/LegendAlacrity.png",
+        "version": "16.23.1"
+      },
+      "legendhaste": {
+        "name": "Legend: Haste",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendHaste/LegendHaste.png",
+        "version": "16.23.1"
+      },
+      "legendbloodline": {
+        "name": "Legend: Bloodline",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/LegendBloodline/LegendBloodline.png",
+        "version": "16.23.1"
+      },
+      "cutdown": {
+        "name": "Cut Down",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Precision/CutDown/CutDown.png",
+        "version": "16.23.1"
+      },
+      "laststand": {
+        "name": "Last Stand",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/LastStand/LastStand.png",
+        "version": "16.23.1"
+      },
+      "graspoftheundying": {
+        "name": "Grasp of the Undying",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/GraspOfTheUndying/GraspOfTheUndying.png",
+        "version": "16.23.1"
+      },
+      "aftershock": {
+        "name": "Aftershock",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/VeteranAftershock/VeteranAftershock.png",
+        "version": "16.23.1"
+      },
+      "demolish": {
+        "name": "Demolish",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Demolish/Demolish.png",
+        "version": "16.23.1"
+      },
+      "shieldbash": {
+        "name": "Shield Bash",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/MirrorShell/MirrorShell.png",
+        "version": "16.23.1"
+      },
+      "secondwind": {
+        "name": "Second Wind",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/SecondWind/SecondWind.png",
+        "version": "16.23.1"
+      },
+      "boneplating": {
+        "name": "Bone Plating",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/BonePlating/BonePlating.png",
+        "version": "16.23.1"
+      },
+      "overgrowth": {
+        "name": "Overgrowth",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Overgrowth/Overgrowth.png",
+        "version": "16.23.1"
+      },
+      "revitalize": {
+        "name": "Revitalize",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Resolve/Revitalize/Revitalize.png",
+        "version": "16.23.1"
+      },
+      "unflinching": {
+        "name": "Unflinching",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Unflinching/Unflinching.png",
+        "version": "16.23.1"
+      },
+      "summonaery": {
+        "name": "Summon Aery",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/SummonAery/SummonAery.png",
+        "version": "16.23.1"
+      },
+      "arcanecomet": {
+        "name": "Arcane Comet",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/ArcaneComet/ArcaneComet.png",
+        "version": "16.23.1"
+      },
+      "stormraiderssurge": {
+        "name": "Stormraider's Surge",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
+        "version": "16.23.1"
+      },
+      "phaserush": {
+        "name": "Stormraider's Surge",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/PhaseRush/StormraidersSurgeRuneIcon2.png",
+        "version": "16.23.1"
+      },
+      "deathfiretouch": {
+        "name": "Deathfire Touch",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/DeathfireTouch/DEATHFIRE_TOUCH_KEYSTONE.png",
+        "version": "16.23.1"
+      },
+      "manaflowband": {
+        "name": "Manaflow Band",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/ManaflowBand/ManaflowBand.png",
+        "version": "16.23.1"
+      },
+      "nimbuscloak": {
+        "name": "Nimbus Cloak",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/NimbusCloak/6361.png",
+        "version": "16.23.1"
+      },
+      "transcendence": {
+        "name": "Transcendence",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Transcendence/Transcendence.png",
+        "version": "16.23.1"
+      },
+      "celerity": {
+        "name": "Celerity",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Celerity/CelerityTemp.png",
+        "version": "16.23.1"
+      },
+      "absolutefocus": {
+        "name": "Absolute Focus",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/AbsoluteFocus/AbsoluteFocus.png",
+        "version": "16.23.1"
+      },
+      "scorch": {
+        "name": "Scorch",
+        "url": "https://ddragon.leagueoflegends.com/cdn/img/perk-images/Styles/Sorcery/Scorch/Scorch.png",
+        "version": "16.23.1"
+      }
+    },
+    "spells": {
+      "cleanse": {
+        "name": "Cleanse",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SummonerBoost.png",
+        "version": "16.23.1"
+      },
+      "flash": {
+        "name": "Flash",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SummonerCherryFlash.png",
+        "version": "16.23.1"
+      },
+      "ignite": {
+        "name": "Ignite",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SummonerDot.png",
+        "version": "16.23.1"
+      },
+      "exhaust": {
+        "name": "Exhaust",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SummonerExhaust.png",
+        "version": "16.23.1"
+      },
+      "ghost": {
+        "name": "Ghost",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SummonerHaste.png",
+        "version": "16.23.1"
+      },
+      "heal": {
+        "name": "Heal",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SummonerHeal.png",
+        "version": "16.23.1"
+      },
+      "teleport": {
+        "name": "Teleport",
+        "url": "https://ddragon.leagueoflegends.com/cdn/16.23.1/img/spell/SummonerTeleport.png",
+        "version": "16.23.1"
+      }
+    }
+  }
+}

@@ -96,7 +96,16 @@
   const empty = msg => `<p class="history-unavailable">${safe(msg)}</p>`;
   const fmtTime = v => num(v)?`${Math.floor(v/60)}m ${String(Math.floor(v%60)).padStart(2,'0')}s`:'Durata N/D';
   function relative(date) { const t=Date.parse(date);if(!Number.isFinite(t))return 'Data N/D';const d=Math.max(0,Math.floor((Date.now()-t)/864e5));return d===0?'Oggi':d===1?'Ieri':`${d} giorni fa`; }
-  function inventory(g,m){return Array.from({length:6},(_,i)=>unit(list(g.items)[i],'item',m)).join('')+unit(g.trinket,'item',m);}
+  function normalizedItems(values){
+    const items=list(values), result=[];
+    for(let i=0;i<items.length;i++){
+      if(norm(items[i])==='jaksho'&&norm(items[i+1])==='theprotean'){
+        result.push("Jak'Sho, The Protean");i++;
+      }else result.push(items[i]);
+    }
+    return result;
+  }
+  function inventory(g,m){const items=normalizedItems(g.items);return Array.from({length:6},(_,i)=>unit(items[i],'item',m)).join('')+unit(g.trinket,'item',m);}
   function result(g){return g.win===true?'Vittoria':g.win===false?'Sconfitta':'Esito N/D';}
   function kda(g){const a=String(g.kda||'').split('/').map(Number);return a.length===3&&a.every(Number.isFinite)?a[1]===0?'Perfect':`${((a[0]+a[2])/a[1]).toFixed(2)} KDA`:'KDA N/D';}
   function timeline(g,m){
