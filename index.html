@@ -13,7 +13,7 @@
             <a class="brand" href="./"><span class="brandmark">M</span>MID<span>LAB</span><small>COUNTERPICK COMPANION</small></a>
             <nav>
                 <button class="active" id="navMatch">Matchup</button>
-                <button id="navPro">Pro Matchups</button>
+                <button id="navPro">Partite pro</button>
                 <button id="navPool">Il mio pool <span id="poolCount">0</span></button>
                 <button id="method">Come leggere i dati ↗</button>
             </nav>
@@ -67,13 +67,13 @@
                     <p class="caveat">I 5 matchup selezionati per GD15. Il win rate riguarda l’intera partita, non la vittoria della lane.</p>
                 </section>
                 <section id="proPanel" class="pro-panel">
-                    <div class="eyebrow">03 / PRO MATCHUPS</div>
-                    <h2>Preparati come un pro.</h2>
-                    <p class="pro-muted">Cerca qualunque coppia di campioni del roster. Partite reali, stesso avversario e stessa posizione. Solo LCK, LPL, LEC e LCS.</p>
-                    <div id="proDuel" class="pro-duel"></div>
+                    <div class="eyebrow">03 / MATCH HISTORY</div>
+                    <h2>Partite recenti dei pro</h2>
+                    <p class="pro-muted">Esplora le partite reali in midlane. Apri ogni riga per vedere oggetti, abilità, rune e squadre.</p>
+                    <div id="proDuel" class="history-context"></div>
                     <div class="pro-filters">
-                        <label>Avversario mid<select id="proEnemy"></select></label>
-                        <label>Il tuo campione<select id="proPick"></select></label>
+                        <label>Campione selezionato<select id="proEnemy"></select></label><label>Mostra<select id="proDirection"><option value="against">Partite contro il campione</option><option value="as">Partite giocate col campione</option></select></label>
+                        <label>Altro campione<select id="proPick"></select></label>
                         <label>Campionato<select id="proLeague"><option value="all">Tutti e quattro</option><option>LCK</option><option>LPL</option><option>LEC</option><option>LCS</option></select></label>
                         <label>Tipo di partita<select id="proType"><option value="all">Tutte</option><option value="competitive">Competitiva</option><option value="soloq">SoloQ pro</option></select></label>
                         <label>Periodo<select id="proDays"><option value="30">Ultimi 30 giorni</option><option value="90" selected>Ultimi 90 giorni</option><option value="180">Ultimi 180 giorni</option><option value="365">Ultimo anno</option></select></label>
