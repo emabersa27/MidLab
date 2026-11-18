@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+        <meta content="width=device-width,initial-scale=1" name="viewport"/>
+        <meta content="#0c1118" name="theme-color"/>
+        <meta content="66 midlaner, 330 matchup. Il tuo spazio personale per scegliere il prossimo counterpick." name="description"/>
+        <title>MIDLAB — Il vantaggio inizia dal pick</title>
+        <link href="src/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <a class="brand" href="./"><span class="brandmark">M</span>MID<span>LAB</span><small>COUNTERPICK COMPANION</small></a>
+            <nav>
+                <button class="active" id="navMatch">Matchup</button>
+                <button id="navPool">Il mio pool <span id="poolCount">0</span></button>
+                <button id="method">Come leggere i dati ↗</button>
+            </nav>
+            <span class="patch"><i></i> PATCH 26.22</span>
+        </header>
+        <div class="layout">
+            <aside>
+                <div class="eyebrow">01 / SCEGLI L’AVVERSARIO</div>
+                <h2>Chi hai contro?</h2>
+                <label class="search"><span>⌕</span><input aria-label="Cerca un campione avversario" id="search" placeholder="Cerca un campione…" type="search"/><kbd>/</kbd></label>
+                <div class="sidebarline"><span id="champCount">66 campioni</span><button aria-pressed="false" id="onlyFav">☆ Preferiti</button></div>
+                <div aria-label="Campioni avversari" class="roster" id="roster"></div>
+                <div class="asidefoot">
+                    <span class="diamond">◇</span>
+                    <div>Il tuo vantaggio, a colpo d’occhio.<small>Mid abituali e pick situazionali.</small></div>
+                </div>
+            </aside>
+            <main>
+                <section class="intro">
+                    <div>
+                        <div class="eyebrow">IL VANTAGGIO INIZIA DAL PICK</div>
+                        <h1>La tua prossima <em>mossa.</em></h1>
+                        <p>Leggi il matchup. Scegli con più consapevolezza.</p>
+                    </div>
+                    <div class="dataset">66 <span>campioni</span><b>330 <span>matchup</span></b></div>
+                </section>
+                <section class="hero" id="hero">
+                    <div class="heroContent">
+                        <div class="eyebrow">AVVERSARIO SELEZIONATO</div>
+                        <div class="enemy">
+                            <div id="enemyImage"></div>
+                            <div><h2 id="enemyName">Ahri</h2><p id="enemyTitle">la volpe a nove code</p></div>
+                            <button aria-label="Aggiungi avversario ai preferiti" id="favEnemy" title="Aggiungi ai preferiti">☆</button>
+                        </div>
+                        <div class="tags"><span>MID LANE</span><span>EMERALD+</span><span>RANKED SOLO</span><span>WORLD</span></div>
+                    </div>
+                    <div class="heroLabel">CONOSCI IL TUO AVVERSARIO<span>Gioca la lane con un piano.</span></div>
+                </section>
+                <section class="results">
+                    <div class="sectionTop">
+                        <div>
+                            <div class="eyebrow">02 / TROVA LA TUA RISPOSTA</div>
+                            <h2>I tuoi counterpick <span id="resultCount">05</span></h2>
+                        </div>
+                        <div class="segmented"><button class="active" id="sortGold">Vantaggio in lane</button><button id="sortWin">Win rate</button></div>
+                    </div>
+                    <div class="filterrow"><p id="sortDescription">Ordinati per oro medio di vantaggio al minuto 15.</p><label><input id="poolFilter" type="checkbox"/> Solo il mio pool</label></div>
+                    <div class="cards" id="cards">
+                        <div class="empty">Caricamento dei matchup…</div>
+                    </div>
+                    <p class="caveat">I 5 matchup selezionati per GD15. Il win rate riguarda l’intera partita, non la vittoria della lane.</p>
+                </section>
+                <section class="bottom">
+                    <article class="notes">
+                        <div class="eyebrow">IL TUO TACCUINO</div>
+                        <h3>La prossima volta, ricordati.</h3>
+                        <label for="notes" id="noteLabel">Note contro Ahri</label>
+                        <textarea id="notes" placeholder="Es. aspetta che usi il charm prima di ingaggiare…"></textarea>
+                        <small id="saveState">Note salvate solo in questo browser.</small>
+                    </article>
+                    <article class="readout">
+                        <div class="eyebrow">LEGGI OLTRE IL NUMERO</div>
+                        <h3>Lane ≠ partita.</h3>
+                        <p>Un vantaggio iniziale non è una vittoria garantita. Affianca al dato in oro il win rate e la tua esperienza con il campione.</p>
+                        <div><span>Fonte</span><a href="https://u.gg/lol/champions/ahri/counter?role=mid" id="source" rel="noopener" target="_blank">U.GG · Apri matchup ↗</a></div>
+                        <div><span>Rilevazione</span><strong>17 novembre 2026</strong></div>
+                        <button id="export">↓ Esporta questi matchup in CSV</button>
+                    </article>
+                </section>
+                <footer>MIDLAB <span>Strumento personale per la midlane. Non affiliato a Riot Games.</span><span>Dati statici · Patch 26.22</span></footer>
+            </main>
+        </div>
+        <div hidden="" id="compareBar"><span id="compareCount">0/3 pick selezionati</span><button id="compareOpen">Confronta i pick →</button><button aria-label="Svuota confronto" id="compareClear">✕</button></div>
+        <dialog id="dialog">
+            <button aria-label="Chiudi finestra" class="close">✕</button>
+            <div id="dialogBody"></div>
+        </dialog>
+        <div id="toast" role="status"></div>
+        <script defer="" src="src/app.js"></script>
+    </body>
+</html>
