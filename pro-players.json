@@ -1,4 +1,77 @@
 {
-  "updatedAt": "2026-11-18T18:27:27.888404+00:00",
-  "players": {}
+  "updatedAt": "2026-11-18T18:31:47.275993+00:00",
+  "players": {
+    "zeka (kim geon-woo)": {
+      "name": "Zeka (Kim Geon-woo)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/1/19/HLE_Zeka_2025_Split_1_2.png/revision/latest/scale-to-width-down/96?cb=20250228175142",
+      "source": "https://lol.fandom.com/wiki/File:HLE_Zeka_2025_Split_1_2.png",
+      "profile": "https://lol.fandom.com/wiki/Zeka_(Kim_Geon-woo)"
+    },
+    "bdd": {
+      "name": "Bdd",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/f/f6/LZ_Bdd_2017_Spring.png/revision/latest/scale-to-width-down/96?cb=20170802035120",
+      "source": "https://lol.fandom.com/wiki/File:LZ_Bdd_2017_Spring.png",
+      "profile": "https://lol.fandom.com/wiki/Bdd"
+    },
+    "chovy": {
+      "name": "Chovy",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/9/9b/GRF_Chovy_2018_Split_2.png/revision/latest/scale-to-width-down/96?cb=20180927185607",
+      "source": "https://lol.fandom.com/wiki/File:GRF_Chovy_2018_Split_2.png",
+      "profile": "https://lol.fandom.com/wiki/Chovy"
+    },
+    "clozer": {
+      "name": "Clozer",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/9/9e/T1_Clozer_2020_Split_2.png/revision/latest/scale-to-width-down/96?cb=20200926080424",
+      "source": "https://lol.fandom.com/wiki/File:T1_Clozer_2020_Split_2.png",
+      "profile": "https://lol.fandom.com/wiki/Clozer"
+    },
+    "daystar": {
+      "name": "Daystar",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/0/07/TB_Daystar_2023_Split_2.png/revision/latest/scale-to-width-down/96?cb=20230628131510",
+      "source": "https://lol.fandom.com/wiki/File:TB_Daystar_2023_Split_2.png",
+      "profile": "https://lol.fandom.com/wiki/Daystar"
+    },
+    "faker": {
+      "name": "Faker",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/1/19/Faker_Summer_2016.png/revision/latest/scale-to-width-down/96?cb=20170801215041",
+      "source": "https://lol.fandom.com/wiki/File:Faker_Summer_2016.png",
+      "profile": "https://lol.fandom.com/wiki/Faker"
+    },
+    "loki (lee sang-min)": {
+      "name": "Loki (Lee Sang-min)",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/d/da/HLE.C_Loki_2022_Split_2.png/revision/latest/scale-to-width-down/96?cb=20221223171119",
+      "source": "https://lol.fandom.com/wiki/File:HLE.C_Loki_2022_Split_2.png",
+      "profile": "https://lol.fandom.com/wiki/Loki_(Lee_Sang-min)"
+    },
+    "roamer": {
+      "name": "Roamer",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/3/35/BRO.C_Roamer_2021_Split_1.png/revision/latest/scale-to-width-down/96?cb=20210129170106",
+      "source": "https://lol.fandom.com/wiki/File:BRO.C_Roamer_2021_Split_1.png",
+      "profile": "https://lol.fandom.com/wiki/Roamer"
+    },
+    "scout": {
+      "name": "Scout",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/9/94/EDG_Scout_2017_Spring.png/revision/latest/scale-to-width-down/96?cb=20170801202653",
+      "source": "https://lol.fandom.com/wiki/File:EDG_Scout_2017_Spring.png",
+      "profile": "https://lol.fandom.com/wiki/Scout"
+    },
+    "showmaker": {
+      "name": "ShowMaker",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/eb/DWG_ShowMaker_2019_Split_1.png/revision/latest/scale-to-width-down/96?cb=20190722060549",
+      "source": "https://lol.fandom.com/wiki/File:DWG_ShowMaker_2019_Split_1.png",
+      "profile": "https://lol.fandom.com/wiki/ShowMaker"
+    },
+    "ucal": {
+      "name": "Ucal",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/6b/KT_UcaL_2018_Spring.png/revision/latest/scale-to-width-down/96?cb=20180127011359",
+      "source": "https://lol.fandom.com/wiki/File:KT_UcaL_2018_Spring.png",
+      "profile": "https://lol.fandom.com/wiki/Ucal"
+    },
+    "vicla": {
+      "name": "VicLa",
+      "url": "https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/0/06/KT.C_VicLa_2021_Split_1.png/revision/latest/scale-to-width-down/96?cb=20210129170342",
+      "source": "https://lol.fandom.com/wiki/File:KT.C_VicLa_2021_Split_1.png",
+      "profile": "https://lol.fandom.com/wiki/VicLa"
+    }
+  }
 }
